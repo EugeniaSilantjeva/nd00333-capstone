@@ -1,0 +1,22 @@
+[2021-01-26T20:10:30.012138] Entering job preparation.
+[2021-01-26T20:10:31.321536] Starting job preparation.
+[2021-01-26T20:10:31.321572] Extracting the control code.
+[2021-01-26T20:10:31.338362] fetching and extracting the control code on master node.
+[2021-01-26T20:10:31.338394] Starting extract_project.
+[2021-01-26T20:10:31.338433] Starting to extract zip file.
+[2021-01-26T20:10:32.203210] Finished extracting zip file.
+[2021-01-26T20:10:32.348246] Using urllib.request Python 3.0 or later
+[2021-01-26T20:10:32.348420] Start fetching snapshots.
+[2021-01-26T20:10:32.348505] Start fetching snapshot.
+[2021-01-26T20:10:32.348530] Retrieving project from snapshot: 12e375ae-e2f9-4fa9-8979-3f43bd9a04a4
+Starting the daemon thread to refresh tokens in background for process with pid = 39
+[2021-01-26T20:10:32.815707] Finished fetching snapshot.
+[2021-01-26T20:10:32.815737] Finished fetching snapshots.
+[2021-01-26T20:10:32.815750] Finished extract_project.
+[2021-01-26T20:10:32.829896] Finished fetching and extracting the control code.
+[2021-01-26T20:10:32.832877] downloadDataStore - Download from datastores if requested.
+[2021-01-26T20:10:32.834289] Start run_history_prep.
+[2021-01-26T20:10:32.899549] Entering context manager injector.
+[2021-01-26T20:10:32.958045] downloadDataStore completed
+[2021-01-26T20:10:33.060923] Job preparation is complete.
+[2021-01-26T20:10:33.060985] Running Context Managers in Sidecar complete.

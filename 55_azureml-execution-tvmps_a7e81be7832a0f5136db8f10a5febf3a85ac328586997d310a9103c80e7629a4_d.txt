@@ -1,0 +1,201 @@
+2021-01-26T20:10:25Z Starting output-watcher...
+2021-01-26T20:10:25Z IsDedicatedCompute == True, won't poll for Low Pri Preemption
+2021-01-26T20:10:26Z Executing 'Copy ACR Details file' on 10.0.0.4
+2021-01-26T20:10:26Z Copy ACR Details file succeeded on 10.0.0.4. Output: 
+>>>   
+>>>   
+Login Succeeded
+Using default tag: latest
+latest: Pulling from azureml/azureml_2a0e99d2b6c0b56ef3ce1012e5647b1d
+Digest: sha256:615fd878c9871b8766383317e9b7a8aa68005fc3f46f9611b883d9ef7ff20193
+Status: Image is up to date for 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io/azureml/azureml_2a0e99d2b6c0b56ef3ce1012e5647b1d:latest
+27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io/azureml/azureml_2a0e99d2b6c0b56ef3ce1012e5647b1d:latest
+2021-01-26T20:10:27Z Check if container hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 already exist exited with 0, 
+
+5a9c010485d9e9f5603c3004066b683658a47c82b30e140f13362369b4fb9eb5
+2021/01/26 20:10:28 Starting App Insight Logger for task:  containerSetup
+2021/01/26 20:10:28 Version: 3.0.01467.0023 Branch: .SourceBranch Commit: 8f9022f
+2021/01/26 20:10:28 /dev/infiniband/uverbs0 found (implying presence of InfiniBand)?: false
+2021/01/26 20:10:28 /dev/infiniband/uverbs0 found (implying presence of InfiniBand)?: false
+2021/01/26 20:10:28 sshd inside container not required for job, skipping setup.
+2021/01/26 20:10:29 All App Insights Logs was send successfully
+2021-01-26T20:10:29Z Starting docker container succeeded.
+2021-01-26T20:10:33Z Job environment preparation succeeded on 10.0.0.4. Output: 
+>>>   2021/01/26 20:09:22 Starting App Insight Logger for task:  prepareJobEnvironment
+>>>   2021/01/26 20:09:22 Version: 3.0.01467.0023 Branch: .SourceBranch Commit: 8f9022f
+>>>   2021/01/26 20:09:22 runtime.GOOS linux
+>>>   2021/01/26 20:09:22 Reading dyanamic configs
+>>>   2021/01/26 20:09:22 Container sas url: https://baiscriptssn1prod.blob.core.windows.net/aihosttools?sv=2018-03-28&sr=c&si=aihosttoolspolicy&sig=nw%2FdVVtXVw5X%2Fv1RNVe9gGnpR2tHNu9A%2BO103GbElXo%3D
+>>>   2021/01/26 20:09:22 Failed to read from file /mnt/batch/tasks/startup/wd/az_resource/xdsenv.variable/azsecpack.variables, open /mnt/batch/tasks/startup/wd/az_resource/xdsenv.variable/azsecpack.variables: no such file or directory
+>>>   2021/01/26 20:09:22 [in autoUpgradeFromJobNodeSetup] Is Azsecpack installed false, isEnable false,
+>>>   2021/01/26 20:09:22 azsecpack isEnable:false,GetDisableVsatlsscan:true
+>>>   2021/01/26 20:09:22 [doTurnOffAzsecpack] output:   Active: inactive (dead)
+>>>   ,err:<nil>.
+>>>   2021/01/26 20:09:22 OS patching disabled by dynamic configs. Skipping.
+>>>   2021/01/26 20:09:22 Job: AZ_BATCHAI_JOB_NAME does not turn on the DetonationChamber
+>>>   2021/01/26 20:09:22 GPU count found: 0
+>>>   2021/01/26 20:09:22 AMLComputeXDSEndpoint:  https://sn1-prodk8ds.batchai.core.windows.net
+>>>   2021/01/26 20:09:22 AMLComputeXDSApiVersion:  2018-02-01
+>>>   2021/01/26 20:09:22 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config
+>>>   2021/01/26 20:09:22 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/wd
+>>>   2021/01/26 20:09:22 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/shared
+>>>   2021/01/26 20:09:22 Mounting job level file systems
+>>>   2021/01/26 20:09:22 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts
+>>>   2021/01/26 20:09:22 Attempting to read datastore credentials file: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.amlcompute.datastorecredentials
+>>>   2021/01/26 20:09:22 Datastore credentials file not found, skipping.
+>>>   2021/01/26 20:09:22 Attempting to read runtime sas tokens file: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.master.runtimesastokens
+>>>   2021/01/26 20:09:22 Runtime sas tokens file not found, skipping.
+>>>   2021/01/26 20:09:22 No NFS configured
+>>>   2021/01/26 20:09:22 No Azure File Shares configured
+>>>   2021/01/26 20:09:22 Mounting blob file systems
+>>>   2021/01/26 20:09:22 Blobfuse runtime version blobfuse 1.3.6
+>>>   2021/01/26 20:09:22 Mounting azureml-blobstore-27cbb865-75d1-4053-b4ed-a3e5b21a0ec1 container from mlstrg136159 account at /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore
+>>>   2021/01/26 20:09:22 Error opening env file:  open /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.batchai.IdentityResponder.envlist: no such file or directory
+>>>   2021/01/26 20:09:22 Using Compute Identity to authenticate Blobfuse: false.
+>>>   2021/01/26 20:09:22 Using Compute Identity to authenticate Blobfuse: false.
+>>>   2021/01/26 20:09:22 Running following command: /bin/bash -c sudo blobfuse /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore --tmp-path=/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/caches/workspaceblobstore --file-cache-timeout-in-seconds=1000000 -o nonempty -o allow_other --config-file=/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/configs/workspaceblobstore.cfg --log-level=LOG_WARNING
+>>>   2021/01/26 20:09:22 Successfully mounted a/an Blobfuse File System at /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore
+>>>   2021/01/26 20:09:22 Waiting for blobfs to be mounted at /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore
+>>>   2021/01/26 20:09:22 Successfully mounted azureml-blobstore-27cbb865-75d1-4053-b4ed-a3e5b21a0ec1 container from mlstrg136159 account at /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore
+>>>   2021/01/26 20:09:22 No unmanaged file systems configured
+>>>   2021/01/26 20:09:22 From the policy service, the filtering patterns is: , data store is 
+>>>   2021/01/26 20:09:22 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs
+>>>   2021/01/26 20:10:24 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/logs
+>>>   2021/01/26 20:10:24 Creating directory /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/outputs
+>>>   2021/01/26 20:10:25 Starting output-watcher...
+>>>   2021/01/26 20:10:25 Single file input dataset is enabled.
+>>>   2021/01/26 20:10:25 Start to pulling docker image: 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io/azureml/azureml_2a0e99d2b6c0b56ef3ce1012e5647b1d
+>>>   2021/01/26 20:10:25 Start pull docker image: 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io
+>>>   2021/01/26 20:10:25 Container registry is ACR.
+>>>   2021/01/26 20:10:25 Skip getting ACR Credentials from Identity and will be getting it from EMS
+>>>   2021/01/26 20:10:25 Getting ACR Credentials from EMS for environment Experiment HyperDrive-Experiment Environment:Autosave_2021-01-26T19:20:29Z_7fb3168d
+>>>   2021/01/26 20:10:25 Requesting XDS for registry details.
+>>>   2021/01/26 20:10:25 Attempt 1 of http call to https://sn1-prodk8ds.batchai.core.windows.net/hosttoolapi/subscriptions/610d6e37-4747-4a20-80eb-3aad70a55f43/resourceGroups/aml-quickstarts-136159/workspaces/quick-starts-ws-136159/clusters/cpu-cluster/nodes/tvmps_a7e81be7832a0f5136db8f10a5febf3a85ac328586997d310a9103c80e7629a4_d?api-version=2018-02-01
+>>>   2021/01/26 20:10:26 Attempt 1. XDS Api returned non-successful ErrorCode: Success
+>>>    ErrorMessage: 
+>>>   
+>>>   2021/01/26 20:10:26 Got container registry details from credentials service for registry address: 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io.
+>>>   2021/01/26 20:10:26 Writing ACR Details to file...
+>>>   2021/01/26 20:10:26 Copying ACR Details file to worker nodes...
+>>>   2021/01/26 20:10:26 Executing 'Copy ACR Details file' on 10.0.0.4
+>>>   2021/01/26 20:10:26 Copy ACR Details file succeeded on 10.0.0.4. Output: 
+>>>   >>>   
+>>>   >>>   
+>>>   2021/01/26 20:10:26 Successfully retrieved ACR Credentials from EMS.
+>>>   2021/01/26 20:10:26 EMS returned 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io for environment Experiment HyperDrive-Experiment Environment
+>>>   2021/01/26 20:10:26 start login to the docker registry
+>>>   2021/01/26 20:10:26 Successfully logged into the docker registry.
+>>>   2021/01/26 20:10:26 Start run pull docker image command
+>>>   2021/01/26 20:10:26 Pull docker image succeeded.
+>>>   2021/01/26 20:10:26 Pull docker image time: 1.668010844s
+>>>   
+>>>   2021/01/26 20:10:27 Docker Version that this nodes use are: 19.03.14+azure
+>>>   
+>>>   2021/01/26 20:10:27 Setting the memory limit for docker container to be 27787 MB
+>>>   2021/01/26 20:10:27 The env variable file size is 36309 bytes
+>>>   2021/01/26 20:10:27 Original Arguments: run,--ulimit,memlock=9223372036854775807,--ulimit,nofile=262144:262144,--cap-add,sys_ptrace,--name,hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11,-v,/mnt/batch/tasks/shared/LS_root/mounts:/mnt/batch/tasks/shared/LS_root/mounts,-v,/mnt/batch/tasks/shared/LS_root/configs:/mnt/batch/tasks/shared/LS_root/configs,-v,/mnt/batch/tasks/shared/LS_root/shared:/mnt/batch/tasks/shared/LS_root/shared,-v,/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs,-v,/mnt/batch/tasks/startup:/mnt/batch/tasks/startup,-m,27787m,-v,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs,-v,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11,-v,/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd,-v,/opt/azureml:/opt/azureml:ro,-w,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/wd,--expose,23,--env-file,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.batchai.envlist
+>>>   2021/01/26 20:10:27 the binding /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs is discarded as we already have /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 
+>>>   2021/01/26 20:10:27 Updated Arguments: run,--ulimit,memlock=9223372036854775807,--ulimit,nofile=262144:262144,--cap-add,sys_ptrace,--name,hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11,-m,27787m,-w,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/wd,--expose,23,--env-file,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.batchai.envlist,-v,/opt/azureml:/opt/azureml:ro,-v,/mnt/batch/tasks/startup:/mnt/batch/tasks/startup,-v,/mnt/batch/tasks/shared/LS_root/mounts:/mnt/batch/tasks/shared/LS_root/mounts,-v,/mnt/batch/tasks/shared/LS_root/shared:/mnt/batch/tasks/shared/LS_root/shared,-v,/mnt/batch/tasks/shared/LS_root/configs:/mnt/batch/tasks/shared/LS_root/configs,-v,/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11,-v,/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd,-v,/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs
+>>>   2021/01/26 20:10:27 /dev/infiniband/uverbs0 found (implying presence of InfiniBand)?: false
+>>>   2021/01/26 20:10:27 Running Docker command: docker run --ulimit memlock=9223372036854775807 --ulimit nofile=262144:262144 --cap-add sys_ptrace --name hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 -m 27787m -w /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/wd --expose 23 --env-file /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/config/.batchai.envlist -v /opt/azureml:/opt/azureml:ro -v /mnt/batch/tasks/startup:/mnt/batch/tasks/startup -v /mnt/batch/tasks/shared/LS_root/mounts:/mnt/batch/tasks/shared/LS_root/mounts -v /mnt/batch/tasks/shared/LS_root/shared:/mnt/batch/tasks/shared/LS_root/shared -v /mnt/batch/tasks/shared/LS_root/configs:/mnt/batch/tasks/shared/LS_root/configs -v /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11:/mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 -v /mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd -v /mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs:/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/certs --shm-size 2g -d -it --privileged --net=host 27cbb86575d14053b4eda3e5b21a0ec1.azurecr.io/azureml/azureml_2a0e99d2b6c0b56ef3ce1012e5647b1d
+>>>   2021/01/26 20:10:27 Attempt 1 of http call to https://southcentralus.experiments.azureml.net/history/v1.0/private/subscriptions/610d6e37-4747-4a20-80eb-3aad70a55f43/resourceGroups/aml-quickstarts-136159/providers/Microsoft.MachineLearningServices/workspaces/quick-starts-ws-136159/runs/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/spans
+>>>   2021/01/26 20:10:27 Check if container hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 already exist exited with 0, 
+>>>   
+>>>   2021/01/26 20:10:27 Check if container hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 already exist exited with 0, 
+>>>   
+>>>   2021/01/26 20:10:29 Container ssh is not required for job type.
+>>>   2021/01/26 20:10:29 Starting docker container succeeded.
+>>>   2021/01/26 20:10:29 Starting docker container succeeded.
+>>>   2021/01/26 20:10:29 runSpecialJobTask: os.GetEnv constants.StdouterrDir: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs
+>>>   2021/01/26 20:10:29 runSpecialJobTask: Raw cmd for preparation is passed is: /azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11-setup/job_prep.py --snapshots '[{"Id":"12e375ae-e2f9-4fa9-8979-3f43bd9a04a4","PathStack":["."],"SnapshotEntityId":null}]'
+>>>   2021/01/26 20:10:29 runSpecialJobTask: stdout path for preparation is passed is: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs/65_job_prep-tvmps_a7e81be7832a0f5136db8f10a5febf3a85ac328586997d310a9103c80e7629a4_d.txt
+>>>   2021/01/26 20:10:29 runSpecialJobTask: stderr path for preparation is passed is: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs/65_job_prep-tvmps_a7e81be7832a0f5136db8f10a5febf3a85ac328586997d310a9103c80e7629a4_d.txt
+>>>   2021/01/26 20:10:29 native cmd: export AZUREML_JOB_TASK_ERROR_PATH='/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd/runSpecialJobTask_error.json';cd /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11;/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11-setup/job_prep.py --snapshots '[{"Id":"12e375ae-e2f9-4fa9-8979-3f43bd9a04a4","PathStack":["."],"SnapshotEntityId":null}]'
+>>>   2021/01/26 20:10:29 runSpecialJobTask: commons.GetOsPlatform(): ubuntu
+>>>   2021/01/26 20:10:29 runSpecialJobTask: Running cmd: /usr/bin/docker exec -t hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 bash -c source /etc/bash.bashrc; PATH=$PATH:$AZ_BATCH_NODE_STARTUP_DIR/wd/;export AZUREML_JOB_TASK_ERROR_PATH='/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd/runSpecialJobTask_error.json';cd /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11;/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11-setup/job_prep.py --snapshots '[{"Id":"12e375ae-e2f9-4fa9-8979-3f43bd9a04a4","PathStack":["."],"SnapshotEntityId":null}]'
+>>>   2021/01/26 20:10:33 runSpecialJobTask: job preparation exited with code 0 and err <nil>
+>>>   
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:30.012138] Entering job preparation.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:31.321536] Starting job preparation.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:31.321572] Extracting the control code.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:31.338362] fetching and extracting the control code on master node.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:31.338394] Starting extract_project.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:31.338433] Starting to extract zip file.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.203210] Finished extracting zip file.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.348246] Using urllib.request Python 3.0 or later
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.348420] Start fetching snapshots.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.348505] Start fetching snapshot.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.348530] Retrieving project from snapshot: 12e375ae-e2f9-4fa9-8979-3f43bd9a04a4
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: Starting the daemon thread to refresh tokens in background for process with pid = 39
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.815707] Finished fetching snapshot.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.815737] Finished fetching snapshots.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.815750] Finished extract_project.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.829896] Finished fetching and extracting the control code.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.832877] downloadDataStore - Download from datastores if requested.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.834289] Start run_history_prep.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.899549] Entering context manager injector.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:32.958045] downloadDataStore completed
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:33.060923] Job preparation is complete.
+>>>   2021/01/26 20:10:33 runSpecialJobTask: preparation: [2021-01-26T20:10:33.060985] Running Context Managers in Sidecar complete.
+>>>   2021/01/26 20:10:33 All App Insights Logs was send successfully
+>>>   2021/01/26 20:10:33 Process Exiting with Code:  0
+>>>   
+2021-01-26T20:10:33Z 127.0.0.1 slots=4 max-slots=4
+2021-01-26T20:10:33Z launching Custom job
+2021-01-26T20:10:49Z job exited with code 1
+2021-01-26T20:10:49Z PostJobNodeHealthCheck
+2021-01-26T20:10:49Z Executing 'Post job node health check' on 10.0.0.4
+2021-01-26T20:10:50Z Post job node health check succeeded on 10.0.0.4. Output: 
+>>>   2021/01/26 20:10:49 Starting App Insight Logger for task:  postJobNodeHealthCheck
+>>>   2021/01/26 20:10:49 Version: 3.0.01467.0023 Branch: .SourceBranch Commit: 8f9022f
+>>>   2021/01/26 20:10:49 Start Post-job node health check
+>>>   2021/01/26 20:10:49 PostJobNodeHealthCheck
+>>>   2021/01/26 20:10:49 GetDBE: get DBE error
+>>>   2021/01/26 20:10:49 Get system error cmd:  /bin/sh -c /bin/dmesg -T | grep -i -E DBE | tail -1
+>>>   2021/01/26 20:10:49 No system error was found
+>>>   2021/01/26 20:10:49 DBEOutput: 
+>>>   2021/01/26 20:10:49 GetOOM: get OOM error
+>>>   2021/01/26 20:10:49 Get system error cmd:  /bin/sh -c /bin/dmesg -T | grep -i -E 'Out of memory: Kill process [0-9]+ \(python\)' | tail -1
+>>>   2021/01/26 20:10:49 No system error was found
+>>>   2021/01/26 20:10:49 This is a cpu cluster, skipping gpu usage check
+>>>   2021/01/26 20:10:50 All App Insights Logs was send successfully
+>>>   2021/01/26 20:10:50 Process Exiting with Code:  0
+>>>   
+2021-01-26T20:10:50Z Executing 'JobRelease task' on 10.0.0.4
+2021-01-26T20:10:53Z JobRelease task succeeded on 10.0.0.4. Output: 
+>>>   2021/01/26 20:10:50 Starting App Insight Logger for task:  jobRelease
+>>>   2021/01/26 20:10:50 Version: 3.0.01467.0023 Branch: .SourceBranch Commit: 8f9022f
+>>>   2021/01/26 20:10:50 runSpecialJobTask: os.GetEnv constants.StdouterrDir: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs
+>>>   2021/01/26 20:10:50 runSpecialJobTask: Raw cmd for postprocessing is passed is: export AZ_BATCHAI_RUN_STATUS='FAILED';export AZ_BATCHAI_LOG_UPLOAD_FAILED='false';/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python $AZ_BATCHAI_JOB_MOUNT_ROOT/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml-setup/job_release.py
+>>>   2021/01/26 20:10:50 runSpecialJobTask: stdout path for postprocessing is passed is: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs/75_job_post-tvmps_a7e81be7832a0f5136db8f10a5febf3a85ac328586997d310a9103c80e7629a4_d.txt
+>>>   2021/01/26 20:10:50 runSpecialJobTask: stderr path for postprocessing is passed is: /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml_compute_logs/75_job_post-tvmps_a7e81be7832a0f5136db8f10a5febf3a85ac328586997d310a9103c80e7629a4_d.txt
+>>>   2021/01/26 20:10:50 native cmd: export AZUREML_JOB_TASK_ERROR_PATH='/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd/runSpecialJobTask_error.json';cd /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11;export AZ_BATCHAI_RUN_STATUS='FAILED';export AZ_BATCHAI_LOG_UPLOAD_FAILED='false';/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python $AZ_BATCHAI_JOB_MOUNT_ROOT/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml-setup/job_release.py
+>>>   2021/01/26 20:10:50 runSpecialJobTask: commons.GetOsPlatform(): ubuntu
+>>>   2021/01/26 20:10:50 runSpecialJobTask: Running cmd: /usr/bin/docker exec -t hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 bash -c source /etc/bash.bashrc; PATH=$PATH:$AZ_BATCH_NODE_STARTUP_DIR/wd/;export AZUREML_JOB_TASK_ERROR_PATH='/mnt/batch/tasks/workitems/29e5ac5e-e2af-4485-9a83-45e01940460f/job-1/hd_5fa334d0-7ec2-4ac_50299799-4fa2-4a23-9ee6-9e04e7a166b0/wd/runSpecialJobTask_error.json';cd /mnt/batch/tasks/shared/LS_root/jobs/quick-starts-ws-136159/azureml/hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/mounts/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11;export AZ_BATCHAI_RUN_STATUS='FAILED';export AZ_BATCHAI_LOG_UPLOAD_FAILED='false';/azureml-envs/azureml_ba9520bf386d662001eeb9523395794e/bin/python $AZ_BATCHAI_JOB_MOUNT_ROOT/workspaceblobstore/azureml/HD_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11/azureml-setup/job_release.py
+>>>   2021/01/26 20:10:53 runSpecialJobTask: job postprocessing exited with code 0 and err <nil>
+>>>   
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:50.703750] Entering job release
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.727693] Starting job release
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.728520] Logging experiment finalizing status in history service.
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: Starting the daemon thread to refresh tokens in background for process with pid = 301
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.728844] job release stage : upload_datastore starting...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.738315] job release stage : start importing azureml.history._tracking in run_history_release.
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.738356] job release stage : execute_job_release starting...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.738922] job release stage : copy_batchai_cached_logs starting...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.738977] job release stage : copy_batchai_cached_logs completed...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.740015] Entering context manager injector.
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.741684] job release stage : upload_datastore completed...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:51.970598] job release stage : send_run_telemetry starting...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:52.037368] job release stage : execute_job_release completed...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:52.840392] job release stage : send_run_telemetry completed...
+>>>   2021/01/26 20:10:53 runSpecialJobTask: postprocessing: [2021-01-26T20:10:52.840590] Job release is complete
+>>>   2021/01/26 20:10:53 All App Insights Logs was send successfully
+>>>   
+2021-01-26T20:10:53Z Executing 'Collect error information from workers' on 10.0.0.4
+2021-01-26T20:10:53Z Collect error information from workers succeeded on 10.0.0.4. Output: 
+>>>   
+>>>   
+2021-01-26T20:10:53Z Executing 'Job environment clean-up' on 10.0.0.4
+2021-01-26T20:10:54Z Removing container hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11 exited with 0, hd_5fa334d0-7ec2-4ac3-a262-1e187594feb0_11
+
+
