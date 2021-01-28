@@ -1,22 +1,49 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
+# Capstone Project - Azure Machine Learning Engineer
 
-*TODO:* Write a short introduction to your project.
-
-## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+The aim of the project is to create two models, compare their performance, deploy the best performing model as a webservice and test the model's endpoint. The first model was trained using Automated ML and the second one  was created by  hyperparameter tuning using HyperDrive. 
 
 ## Dataset
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+For this project, I am using  the Heart Failure Prediction dataset from Kaggle. The dataset contains 12 clinical features of 299 patients with heart failure and a target variable "DEATH EVENT" indicating if the patient deceased during the follow-up period (boolean). Machine Learning can help detect and manage high-risk patients at an earlier stage.
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+The task is to detect high-risk patients. To solve this binary classification problem, I will use the 12 features to predict possible death events with the help of an ML algorithm. 
+12 clinical features: age, anaemia, diabetes, creatinine_phosphokinase, ejection_fraction, high_blood_pressure, platelets, serum_creatinine, serum_sodium, sex, smoking, and time. Target variable: DEATH_EVENT
+Clinical Features | Description 
+------------- | ----------- 
+Age | Age of the patient
+anaemia  | Decrease of red blood cells or hemoglobin (boolean)
+creatinine_phosphokinase | Level of the CPK enzyme in the blood (mcg/L)
+diabetes | If the patient has diabetes (boolean)
+ejection_fraction | Percentage of blood leaving the heart at each contraction (percentage)
+high_blood_pressure | If the patient has hypertension (boolean)
+platelets | Platelets in the blood (kiloplatelets/mL)
+serum_creatinine | Level of serum creatinine in the blood (mg/dL)
+serum_sodium | Level of serum sodium in the blood (mEq/L)
+sex | Woman or man (binary)
+smoking | If the patient smokes or not (boolean)
+time | Follow-up period (days)
+
+Target Variable | Description 
+------------- | ----------- 
+DEATH_EVENT | If the patient deceased during the follow-up period (boolean)
+
+
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+In the AutoML part of the project, I  imported the dataset after I had registered it in Azure Workspace.   
+
+'''found = False
+key = "Heart Failure Prediction"
+description_text = "Heart Failure Prediction DataSet for Udacity Project 3"
+if key in ws.datasets.keys(): 
+        found = True
+        dataset = ws.datasets[key]'''
+
+In the Hyperdrive part of the project, I saved the dataset to my github repository and retrieved the data from the URL using TabularDatasetFactory class in train.py script. 
+
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
