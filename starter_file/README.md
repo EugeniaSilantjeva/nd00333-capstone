@@ -74,30 +74,72 @@ debug_log | automl_errors.log
 
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+
+The experiment showed that a VotingEnsemble is the best performing model with the primary metric equal to 0.9218579454785403. The parameters of the model are as listed below:
+### PreFittedSoftVotingClassifier
+
+**MinMaxScaler**
+Parameters | Value 
+------------- | ----------- 
+copy | True
+feature_range | (0,1)
+
+
+**ExtraTreesClassifier**
+Parameters | Value 
+------------- | ----------- 
+bootstrap | True
+ccp_alpha | 0.0 
+class_weight | 'balanced'
+criterion |'gini'
+max_depth | None                                                                                                                                                              
+max_depth | None
+max_features | None
+max_leaf_nodes | None
+max_samples | None
+min_samples_split | 0.056842105263157895
+min_weight_fraction_leaf | 0.0
+n_estimators | 25
+n_jobs | 1
+oob_score | True
+random_state | None
+verbose | 0
+warm_start | False
+                                                  
+To improve the results, we can use k-fold cross validation, increase the time of the experiment and block some of the estimators that we know are not going to produce good results. We can also perform feature selection and ingineering. 
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
 
 ## Hyperparameter Tuning
 
 I chose Logisit Regression because it is a widely used classifier suitable for a binary classification problem.<br />
-Advantages of Logistic Regression Classifier:
-* Simple and effectiv e algorithm  suitable for two-class classification tasks
+Advantages of a Logistic Regression Classifier:
+* Simple and effective algorithm suitable for two-class classification tasks
 * The output of the logistic function, a probability score, is easy to interpret
 * Only a few parameters to tune
 * Speed of training the model is relatively high
 
 
-The model will be trained using different combinations of C and max_iter hyperparameters. C is inverse of regularization strength. Like in support vector machines, smaller values specify stronger regularization. max_iter is the maximum number of iterations taken for the solvers to converge.
+The model was trained using different combinations of C and max_iter hyperparameters were used. C is inverse of regularization strength. Like in support vector machines, smaller values specify stronger regularization. max_iter is the maximum number of iterations taken for the solvers to converge.
+
 Parameter | Values used for the Hyperparameter Search
 ------------- | ----------- 
 C | 0.0001, 0.001, 0.01, 0.1, 1,10,100,1000
 max_iter | 100, 200, 300, 400, 500
 
-
+The primary mertic to optimise was the same as in the first experiment: Under the Curve Weighted.
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+
+In the HyperDrive experiment, the best model achieved the primary metric of 0.8727777777777778 and had the following hyperparameters:
+
+Parameters | Value 
+------------- | ----------- 
+C | 0.1 
+max_iter | 400
+
+To improve it, we can perform feature selection and ingineering, extend the duration of the experiment, try different sampling methods and use k-fold CV method. To improve the primary metric result I would also try experimenting with all the parameters of the given estimator or with different estimators and their parameters.  
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
