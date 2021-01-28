@@ -8,7 +8,7 @@ The aim of the project is to create two models, compare their performance, deplo
 ## Dataset
 
 ### Overview
-For this project, I used the Heart "Failure Prediction" dataset from Kaggle. The dataset contains 12 clinical features of 299 patients with heart failure and a target variable "DEATH EVENT" indicating if the patient deceased during the follow-up period (boolean). Machine Learning can help detect and manage high-risk patients at an earlier stage.
+For this project, I used the Heart "Failure Prediction" dataset from Kaggle. The dataset contains 12 clinical features of 299 patients with heart failure and a target variable "DEATH EVENT" indicating if the patient deceased during the follow-up period (Boolean). Machine Learning can help detect and manage high-risk patients at an earlier stage.
 
 ### Task
 The task was to detect the high-risk patients. To solve this binary classification problem, I will use the 12 features to predict possible death events with the help of an ML algorithm. 
@@ -16,16 +16,16 @@ The task was to detect the high-risk patients. To solve this binary classificati
 Clinical Features | Description 
 ------------- | ----------- 
 Age | Age of the patient
-anaemia  | Decrease of red blood cells or hemoglobin (boolean)
+anaemia  | Decrease of red blood cells or hemoglobin (Boolean)
 creatinine_phosphokinase | Level of the CPK enzyme in the blood (mcg/L)
-diabetes | If the patient has diabetes (boolean)
+diabetes | If the patient has diabetes (Boolean)
 ejection_fraction | Percentage of blood leaving the heart at each contraction (percentage)
-high_blood_pressure | If the patient has hypertension (boolean)
+high_blood_pressure | If the patient has hypertension (Boolean)
 platelets | Platelets in the blood (kiloplatelets/mL)
 serum_creatinine | Level of serum creatinine in the blood (mg/dL)
 serum_sodium | Level of serum sodium in the blood (mEq/L)
 sex | Woman or man (binary)
-smoking | If the patient smokes or not (boolean)
+smoking | If the patient smokes or not (Boolean)
 time | Follow-up period (days)
 
 Target Variable | Description 
@@ -77,7 +77,7 @@ debug_log | automl_errors.log
 
 ### Results
 
-The experiment showed that a VotingEnsemble is the best performing model with the primary metric equal to 0.9218579454785403. The parameters of the model are as listed below:
+The experiment showed that VotingEnsemble is the best performing model with the primary metric equal to 0.9218579454785403. The parameters of the model are as listed below:
 ### PreFittedSoftVotingClassifier
 
 **MinMaxScaler**
@@ -108,7 +108,7 @@ random_state | None
 verbose | 0
 warm_start | False
                                                   
-To improve the results, we can use k-fold cross validation, increase the time of the experiment and block some of the estimators that we know are not going to produce good results. We can also perform feature selection and ingineering. 
+To improve the results, we can use k-fold cross validation, increase the time of the experiment and block some of the estimators that we know are not going to produce good results. We can also perform feature selection and engineering. 
 
 
 The `RunDetails` widget:
@@ -120,7 +120,7 @@ The best model with its run id:
 
 ## Hyperparameter Tuning
 
-I chose Logisit Regression because it is a widely used classifier suitable for a binary classification problem.<br />
+I chose Logistic Regression because it is a widely used classifier suitable for a binary classification problem.<br />
 Advantages of a Logistic Regression Classifier:
 * Simple and effective algorithm suitable for two-class classification tasks
 * The output of the logistic function, a probability score, is easy to interpret
@@ -135,7 +135,7 @@ Parameter | Values used for the Hyperparameter Search
 C | 0.0001, 0.001, 0.01, 0.1, 1,10,100,1000
 max_iter | 100, 200, 300, 400, 500
 
-The primary mertic to optimise was the same as in the first experiment: Under the Curve Weighted.
+The primary metric to optimise was the same as in the first experiment: Under the Curve Weighted.
 
 ### Results
 
@@ -146,9 +146,8 @@ Parameters | Value
 C | 0.1 
 max_iter | 400
 
-To improve it, we can perform feature selection and ingineering, extend the duration of the experiment, try different sampling methods and use k-fold CV method. To improve the primary metric result I would also try experimenting with all the parameters of the given estimator or with different estimators and their parameters.  
+To improve it, we can perform feature selection and engineering, extend the duration of the experiment, try different sampling methods and use k-fold CV method. To improve the primary metric result I would also try experimenting with all the parameters of the given estimator or with different estimators and their parameters.  
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 The `RunDetails` widget:
 ![](Images/Hyperdriverundetails.JPG)
@@ -165,7 +164,7 @@ In my experiment, the AutoML model proved to be the best performing one. I deplo
 Model endpoint is active:
 ![](Images/modelendpointactive.JPG)
 
-To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - and converted it to a JSON string and sent an HTTP Post request to the endpont:
+To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - and converted it to a JSON string and sent an HTTP Post request to the endpoint:
 ```Python
 df = df.drop(columns=["DEATH_EVENT"])
 
