@@ -3,6 +3,8 @@
 
 The aim of the project is to create two models, compare their performance, deploy the best performing model as a webservice and test the model's endpoint. The first model was trained using Automated ML and the second one  was created by  hyperparameter tuning using HyperDrive. 
 
+![](Images/Projectdiagram.JPG)
+
 ## Dataset
 
 ### Overview
@@ -108,8 +110,13 @@ warm_start | False
                                                   
 To improve the results, we can use k-fold cross validation, increase the time of the experiment and block some of the estimators that we know are not going to produce good results. We can also perform feature selection and ingineering. 
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+The `RunDetails` widget:
+![](Images/Automlrundetails0.1.JPG)
+![](Images/rundetailsautoml.JPG)
+
+The best model with its run id:
+![](Images/AutomlbestrunidJPG.JPG)
 
 ## Hyperparameter Tuning
 
@@ -143,9 +150,20 @@ To improve it, we can perform feature selection and ingineering, extend the dura
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
+The `RunDetails` widget:
+![](Images/Hyperdriverundetails.JPG)
+![](Images/huperdrive2.JPG)
+![](Images/hyperdrive3.JPG)
+
+The best model with its run id:
+![](Images/hyperdrivebestmodel.JPG)
+
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
 In my experiment, the AutoML model proved to be the best performing one. I deployed the model as a web service to an Azure Container Instance (ACI), using the environment of the best run and the entry script (score.py) that was created with the model and saved in the same directory. The script initializes the service and runs the model using request data. Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-existing-model 
+
+Model endpoint is active:
+![](Images/modelendpointactive.JPG)
 
 To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - and converted it to a JSON string and sent an HTTP Post request to the endpont:
 ```Python
