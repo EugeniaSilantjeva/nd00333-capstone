@@ -77,7 +77,7 @@ debug_log | automl_errors.log
 
 ### Results
 
-The experiment showed that VotingEnsemble is the best performing model with the primary metric equal to 0.9218579454785403. The parameters of the model are as listed below:
+The experiment showed that VotingEnsemble is the best performing model with a prediction score equal to 0.9218579454785403. The parameters of the model are as listed below:
 ### PreFittedSoftVotingClassifier
 
 **MinMaxScaler**
@@ -139,14 +139,14 @@ The primary metric to optimise was the same as in the first experiment: Under th
 
 ### Results
 
-In the HyperDrive experiment, the best model achieved the primary metric of 0.8727777777777778 and had the following hyperparameters:
+In the HyperDrive experiment, the best model achieved a prediction score of 0.8727777777777778 and had the following hyperparameters:
 
 Parameters | Value 
 ------------- | ----------- 
 C | 0.1 
 max_iter | 400
 
-To improve it, we can perform feature selection and engineering, extend the duration of the experiment, try different sampling methods and use k-fold CV method. To improve the primary metric result I would also try experimenting with all the parameters of the given estimator or with different estimators and their parameters.  
+To improve it, we can perform feature selection and engineering, extend the duration of the experiment, try different sampling methods and use k-fold CV method. To improve the primary metric result, I would also try experimenting with all the parameters of the given estimator or with different estimators and their parameters.  
 
 
 The `RunDetails` widget:
@@ -159,12 +159,12 @@ The best model with its run id:
 
 ## Model Deployment
 
-In my experiment, the AutoML model proved to be the best performing one. I deployed the model as a web service to an Azure Container Instance (ACI), using the environment of the best run and the entry script (score.py) that was created with the model and saved in the same directory. The script initializes the service and runs the model using request data. Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-existing-model 
+To deploy a model, I selected the one with the highest prediction score. In my experiment, the AutoML model demonstrated the best performance. I deployed the model as a web service to an Azure Container Instance (ACI), using the environment of the best run and the entry script (score.py) that was generated with the model. The script initializes the service and runs the model using request data. Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-existing-model 
 
 Model endpoint is active:
 ![](Images/modelendpointactive.JPG)
 
-To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - and converted it to a JSON string and sent an HTTP Post request to the endpoint:
+To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - converted it to a JSON string and sent an HTTP Post request to the endpoint:
 ```Python
 df = df.drop(columns=["DEATH_EVENT"])
 
