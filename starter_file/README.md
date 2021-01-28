@@ -145,7 +145,18 @@ To improve it, we can perform feature selection and ingineering, extend the dura
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+In my experiment, the AutoML model proved to be the best performing one. I deployed the model as a web service to an Azure Container Instance (ACI), using the environment of the best run and the entry script (score.py) that was created with the model and saved in the same directory. The script initializes the service and runs the model using request data. Reference: https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-existing-model 
 
+To query the endpoint, I created a sample input -  the clinical features of the first three patients in the dataset - and converted it to a JSON string and sent an HTTP Post request to the endpont:
+```Python
+df = df.drop(columns=["DEATH_EVENT"])
+
+input_data = json.dumps({
+    'data': df[0:2].to_dict(orient='records')
+})
+headers = {'Content-Type': 'application/json'}
+resp = requests.post(scoring_uri, input_data, headers=headers)
+```
 ## Screen Recording
 https://youtu.be/9xANJjPH5Sc
 
