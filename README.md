@@ -128,7 +128,7 @@ Advantages of a Logistic Regression Classifier:
 * Speed of training the model is relatively high
 
 
-The model was trained using different combinations of C and max_iter hyperparameters were used. C is inverse of regularization strength. Like in support vector machines, smaller values specify stronger regularization. max_iter is the maximum number of iterations taken for the solvers to converge.
+The model was trained using different combinations of C and max_iter hyperparameters. C is inverse of regularization strength. Like in support vector machines, smaller values specify stronger regularization. max_iter is the maximum number of iterations taken for the solvers to converge.
 
 Parameter | Values used for the Hyperparameter Search
 ------------- | ----------- 
