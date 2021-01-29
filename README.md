@@ -8,7 +8,7 @@ The aim of the project is to create two models, compare their performance, deplo
 ## Dataset
 
 ### Overview
-For this project, I used the Heart "Failure Prediction" dataset from Kaggle. The dataset contains 12 clinical features of 299 patients with heart failure and a target variable "DEATH EVENT" indicating if the patient deceased during the follow-up period (Boolean). Machine Learning can help detect and manage high-risk patients at an earlier stage.
+For this project, I used the "Heart Failure Prediction" dataset from Kaggle. The dataset contains 12 clinical features of 299 patients with heart failure and a target variable "DEATH EVENT" indicating if the patient deceased during the follow-up period (Boolean). Machine Learning can help detect and manage high-risk patients at an earlier stage.
 
 ### Task
 The task was to detect the high-risk patients. To solve this binary classification problem, I will use the 12 features to predict possible death events with the help of an ML algorithm. 
